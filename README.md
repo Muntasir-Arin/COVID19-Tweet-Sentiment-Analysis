@@ -34,12 +34,12 @@ Note: The models Bert and Electra were trained using the small versions with onl
 ## Explanation of Models
 
 1. **Logistic Regression:**
-   - Logistic Regression is a linear model used for binary classification tasks.
-   - It predicts the probability that a given input belongs to a particular class.
-   - Despite its simplicity, it can perform well in certain scenarios and serves as a baseline model.
+   - Logistic Regression is a linear model commonly used for multi-class classification tasks.
+   - It predicts the probability that a given input belongs to each class.
+   - Despite its simplicity, it can perform well in certain scenarios and serves as a baseline model for text classification tasks.
 
 2. **Support Vector Machines (SVM):**
-   - Support Vector Machines are versatile supervised learning models capable of performing classification and regression tasks.
+   - Support Vector Machines are versatile supervised learning models capable of performing multi-class classification tasks.
    - They find the hyperplane that best separates classes in a high-dimensional space.
    - SVMs are effective in handling high-dimensional data and can capture complex relationships between features.
 
@@ -69,6 +69,28 @@ Note: The models Bert and Electra were trained using the small versions with onl
    - Electra achieves competitive performance while requiring less computational resources compared to BERT.
 
 Note: Each model has its strengths and weaknesses, and the choice of model depends on the specific characteristics of the dataset and the task at hand.
+
+## Explanation of TF-IDF (Term Frequency-Inverse Document Frequency)
+
+TF-IDF is a numerical statistic used to reflect the importance of a word in a document relative to a collection of documents. It is commonly used in information retrieval and text mining.
+
+1. **Term Frequency (TF):**
+   - Term Frequency measures how frequently a term appears in a document.
+   - It is calculated as the number of times a term appears in a document divided by the total number of terms in the document.
+   - TF increases with the number of occurrences of a term within a document.
+
+2. **Inverse Document Frequency (IDF):**
+   - Inverse Document Frequency measures the importance of a term across a collection of documents.
+   - It is calculated as the logarithm of the total number of documents divided by the number of documents containing the term.
+   - IDF decreases with the number of documents containing the term, indicating that common terms are less important.
+
+3. **TF-IDF Calculation:**
+   - TF-IDF is calculated as the product of TF and IDF.
+   - It combines the local importance of a term (TF) with its global importance (IDF) across a collection of documents.
+   - Words with high TF-IDF scores are important within a document but relatively rare across the entire collection, making them good candidates for distinguishing between documents.
+
+TF-IDF is commonly used for feature extraction and vectorization in text mining and natural language processing tasks, including document classification, clustering, and information retrieval.
+
 
 ## Acknowledgments
 - Kaggle and the contributors to the COVID-19 NLP Text Classification Dataset.
